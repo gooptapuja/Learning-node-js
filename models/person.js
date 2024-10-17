@@ -1,3 +1,4 @@
+const { type } = require('express/lib/response');
 const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
@@ -29,7 +30,16 @@ const personSchema = new mongoose.Schema({
     salary:{
         type:Number,
         required:true
+    },
+    username:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
     }
+
 });
 
 // create person model
